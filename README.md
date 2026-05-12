@@ -34,4 +34,3 @@ Este repositório foi estruturado seguindo os padrões de mercado (`br.com.guilh
 
 1. Clone este repositório para a sua máquina local:
    ```bash
-   git clone [https://github.com/SEU_USUARIO/baguari-fc-manager.git](https://github.com/SEU_USUARIO/baguari-fc-manager.git)
