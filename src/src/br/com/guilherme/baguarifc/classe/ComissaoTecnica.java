@@ -1,5 +1,7 @@
 package br.com.guilherme.baguarifc.classe;
 
+import br.com.guilherme.baguarifc.excecoes.ProfissionalLesionadoException;
+
 public class ComissaoTecnica extends Profissional{
     public String funcao;
 
@@ -11,7 +13,7 @@ public class ComissaoTecnica extends Profissional{
         this.funcao = funcao;
     }
     @Override
-    public boolean trabalhar(){
+    public boolean trabalhar() throws ProfissionalLesionadoException {
         return false;
     }
 }

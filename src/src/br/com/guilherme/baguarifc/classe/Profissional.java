@@ -37,14 +37,22 @@ public abstract class Profissional {
         this.energia = energia;
     }
 
-    public void lesao()throws ProfissionalLesionadoException{
-        if (this.lesao){
-            this.lesao = false;
-        }else
+    public void verificarLesao() throws ProfissionalLesionadoException {
+        if (this.lesao == true) {
             throw new ProfissionalLesionadoException();
-
+        }
     }
 
 
-    public abstract boolean trabalhar();
+    public abstract boolean trabalhar () throws ProfissionalLesionadoException;
+
+
+    public boolean isLesao() {
+        return lesao;
+    }
+
+    public void setLesao(boolean lesao) {
+        this.lesao = lesao;
+    }
+
 }

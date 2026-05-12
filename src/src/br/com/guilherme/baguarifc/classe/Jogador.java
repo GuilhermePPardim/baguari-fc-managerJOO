@@ -1,8 +1,19 @@
 package br.com.guilherme.baguarifc.classe;
 
+import br.com.guilherme.baguarifc.excecoes.ProfissionalLesionadoException;
+
 public class Jogador extends Profissional{
 
     public String posicao;
+
+    public int getNumeroCamisa() {
+        return numeroCamisa;
+    }
+
+    public void setNumeroCamisa(int numeroCamisa) {
+        this.numeroCamisa = numeroCamisa;
+    }
+
     public int numeroCamisa;
 
     public String getPosicao() {
@@ -22,8 +33,9 @@ public class Jogador extends Profissional{
     }
 
     @Override
-    public boolean trabalhar(){
-        System.out.println("Jogar");
+    public boolean trabalhar() throws ProfissionalLesionadoException {
+        this.verificarLesao();
+        System.out.println("O jogador não esta lesionado pode jogar");
         return false;
     }
 
